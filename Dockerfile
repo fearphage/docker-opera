@@ -3,7 +3,8 @@ FROM debian:sid
 MAINTAINER fearphage <fearphage+dockerfiles@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV OPERA_CHANNEL opera-${CHANNEL:-stable}
+ENV CHANNEL stable
+ENV OPERA_CHANNEL opera-$CHANNEL
 
 # Install Opera
 RUN apt-get update \
